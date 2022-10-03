@@ -14,13 +14,13 @@ $(document).ready(function () {
       } 
     })
   });
-  $('#btnSendMsg').click( function (){
+  $('#btnSendMsg').click( function(){
     // url from where we want to get the data
-    console.log("SendMsg");
+     console.log("SendMsg");
 
-    data_input = { "msg": $('#txtMessage').val(), "name": $('#txtName').val()};
+     data_input = { "msg": $('#txtMessage').val(), "name": $('#txtName').val()};
 
-    socket.emit('joidRoom', data_input, function (data) {
+     socket.emit('joidRoom', data_input, function (data) {
             console.log('sent message to server!');
             console.log(data);
             //
@@ -29,11 +29,11 @@ $(document).ready(function () {
                 text: data,
             })
     });
+  });
+});
 
-});
-});
+
 
 function AppendData(val){
   $("#listUser").append('<a href="#" class="list-group-item list-group-item-action"> Random : '+ val +'</a>');
 }
-//Work exercise,Insert code here
