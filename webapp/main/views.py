@@ -1,5 +1,3 @@
-#views.py
-
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -9,5 +7,5 @@ def list_view(request):
     
     return render(request, "main/home.html",  {'actors': actors})
 
-def join(request):
-    return render(request, "main/join.html")
+def client(request):
+    return render(request, "main/join.html", )
